@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    php-74:
+        #Busca o Dockerfile na raiz
+        build: .
+        
+        #Porta 8080 da maquina vai rodar na porta 80 do container
+        ports:
+            - "8080:80" 
+        
+        #Tudo que tiver na raiz vai ser montado no container
+        volumes:
+            - ./:/usr/share/nginx
